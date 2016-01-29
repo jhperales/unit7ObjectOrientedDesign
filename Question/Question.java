@@ -49,5 +49,19 @@ public class Question
    public void display()
    {
       System.out.println(text);
-   }
+   }
+
+    /**
+     * Adds text to quesiton text
+     * @param   questionText  the additional text of this question
+     */
+    public void addText(String questionText)
+    {
+        text += questionText;
+    }
+
+   
+    
+
+
 }
