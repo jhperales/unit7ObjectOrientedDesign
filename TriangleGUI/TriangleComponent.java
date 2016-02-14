@@ -1,40 +1,23 @@
+import java.awt.*;
+import java.awt.Graphics;
+import java.awt.geom.*;
+import javax.swing.*;
 
-
-/**
- * Write a description of class TriangleComponent here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class TriangleComponent
+public class TriangleComponent extends JComponent
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
-    /**
-     * Default constructor for objects of class TriangleComponent
-     */
-    public TriangleComponent()
+    private Line2D line1;
+    private Line2D line2;
+    private Line2D line3;
+    
+    public TriangleComponent(Point2D p1, Point2D p2, Point2D p3)
     {
-        // initialise instance variables
-        x = 0;
+        this.line1.setLine(p1, p2);
+        this.line2.setLine(p2, p3);
+        this.line3.setLine(p3, p1);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
-    }
-
+    
+   
+    
+    
 }
+        
