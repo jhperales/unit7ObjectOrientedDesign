@@ -6,10 +6,10 @@ import javax.swing.*;
 
 public class TriangleFrame extends JFrame
 {
-    private static final int FRAME_WIDTH = 200;
-    private static final int FRAME_HEIGHT = 400;
+    private static final int FRAME_WIDTH = 1000;
+    private static final int FRAME_HEIGHT = 1000;
 
-    private TriangleCompoment scene;
+    private TriangleComponent scene;
 
 
     class MousePressListener implements MouseListener
@@ -24,8 +24,24 @@ public class TriangleFrame extends JFrame
             this.p2.setLocation(event.getX(), event.getY());
             this.p3.setLocation(event.getX(), event.getY());
 
-            scene.
+            
         }
+        
+        public Point2D getP1()
+        {
+            return this.p1;
+        }
+        
+        public Point2D getP2()
+        {
+            return this.p2;
+        }
+        
+        public Point2D getP3()
+        {
+            return this.p3;
+        }
+        
         // Do-nothing methods
         public void mouseReleased(MouseEvent event)
         {
@@ -43,3 +59,15 @@ public class TriangleFrame extends JFrame
         {
         }
     }
+    
+    public TriangleFrame()
+    {
+        scene = new TriangleComponent();
+        add(scene);
+        
+        MouseListener listener = new MousePressListener();
+        scene.addMouseListener(listener);
+        
+        setSize(FRAME_WIDTH, FRAME_HEIGHT);
+    }
+}

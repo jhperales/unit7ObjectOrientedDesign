@@ -14,6 +14,8 @@ public class MousePressListener implements MouseListener
         this.p2.setLocation(event.getX(), event.getY());
         this.p3.setLocation(event.getX(), event.getY());
         
+        TriangleComponent component = new TriangleComponent(this.p1, this.p2, this.p3);
+        
     }
     // Do-nothing methods
     public void mouseReleased(MouseEvent event)
