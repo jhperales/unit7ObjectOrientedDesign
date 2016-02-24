@@ -12,8 +12,9 @@ public class DrawingEditor extends JFrame
         super.setSize(400, 400);
         this.canvas = new DrawingPanel();
         this.controls = new ControlPanel(canvas);
-        controls.setLayout(new BorderLayout());
-        controls.add(controls, BorderLayout.SOUTH);
+        setLayout(new BorderLayout());
+        this.add(canvas, BorderLayout.CENTER);
+        this.add(controls, BorderLayout.SOUTH);
     }
     public static void main(String[] args)
     {

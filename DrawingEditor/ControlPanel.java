@@ -8,7 +8,6 @@ public class ControlPanel extends JPanel
     private JButton pickColor;
     private JPanel currentColor;
     private DrawingPanel control;
-    private JPanel panel;
     
     
     public ControlPanel(DrawingPanel controls)
@@ -18,7 +17,10 @@ public class ControlPanel extends JPanel
         this.pickColor = new JButton("Pick Color");
         this.currentColor = new JPanel();
         this.control = controls;
-        this.panel = new JPanel();
+        this.add(pickColor);
+        this.add(currentColor);
+        this.add(addCircle);
+        this.add(addSquare);
     }
     
     

@@ -1,40 +1,50 @@
+import javax.swing.*;
+import java.util.ArrayList;
+import java.awt.*;
 
 
-/**
- * Write a description of class DrawingPanel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class DrawingPanel
+
+public class DrawingPanel extends JPanel
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
-    /**
-     * Default constructor for objects of class DrawingPanel
-     */
+    private ArrayList<Shape> shapes;
+    private boolean isActive;
+    private boolean isMoving;
+    private Color currentColor;
+    private Color bgColor;
+    
+    
     public DrawingPanel()
     {
-        // initialise instance variables
-        x = 0;
+        this.shapes = new ArrayList<Shape>();
+        this.currentColor = new Color(0, 0, 0);
+    }
+    
+    /**
+     * Returns the current color
+     *
+     * @return  Returns a Color object
+     */
+    public Color getColor()
+    {
+        return this.currentColor;
+    }
+    
+    /**
+     * Returns size to encapsulate reasonable drawing canvas
+     *
+     * @return Dimension object
+     */
+    public Dimension getPreferredSize()
+    {
+        return new Dimension(400, 400);
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * Brings up JColorChooser and sets chosen colo as new drawing color; leaves unchanges if cancel is clicked
      */
-    public int sampleMethod(int y)
+    public void pickColor()
     {
-        // put your code here
-        return x+y;
+        JColorChooser.setDialog("Pick a color");
     }
 
 }
