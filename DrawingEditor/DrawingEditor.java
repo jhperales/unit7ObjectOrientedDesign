@@ -10,6 +10,12 @@ public class DrawingEditor extends JFrame
     {
         super.setTitle("Drawing Editor");
         this.canvas = new DrawingPanel();
+        this.controls = new ControlPanel(canvas);
+        
+        add(this.canvas);
+        add(this.controls);
+        
+        
         
     }
 }
