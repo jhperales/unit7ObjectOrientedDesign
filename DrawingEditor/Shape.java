@@ -1,53 +1,68 @@
+import java.awt.geom.*;
+import java.awt.*;
 
-
-/**
- * Write a description of abstract class Shape here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public abstract class Shape
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
+    private Point2D.Double center;
+    private double radius;
+    private Color color;
     /**
-     * Default constructor for objects of class Shape
+     * Creates a shape with the center at the spcifed point and with the specified radius and color
      */
-    public Shape()
+    public Shape(Point2D.Double point, double r, Color c)
     {
-        // initialise instance variables
-        x = 0;
+        this.center = point;
+        this.radius = r;
+        this.color = c;
     }
     
     /**
-     * An example of an abstract method - replace this comment with your own
-     *    that describes the operation of the method
+     * Returns center of the shape
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre     shape has been created 
+     * @return  Returns Point2D.Double
      */
-    public abstract int sampleAbstractMethod(int y);
+    public Point2D.Double getCenter()
+    {
+        return this.center;
+    }
+    
+    /**
+     * Returns radius of shape
+     *
+     * @pre     shap has been created
+     * @return  Retursn type double
+     */
+    public double getRadius()
+    {
+        return this.radius;
+    }
+    
+    /**
+     * Displaces the center of this shape by (x, y)
+     *
+     * @pre     Shape is created
+     * @post    Shape has moved from previous location
+     * @param   x  the x-cooridinate
+     * @param   y  the y-cooridinate
+     */
+    public void move(double x, double y)
+    {
+        this.center.setLocation(x, y);
+    }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * sets the radius to r
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre     shape is created
+     * @post    radius of shape has been modified
+     * @param   r the specified radius, what the radius will change to
      */
-    public int sampleMethod(int y)
+    public void setRadius(double r)
     {
-        // put your code here
-        return x+y;
+        this.radius = r;
     }
+
+    
 
 }

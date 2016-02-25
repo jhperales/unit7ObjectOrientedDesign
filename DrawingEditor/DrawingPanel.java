@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.util.ArrayList;
 import java.awt.*;
+import java.awt.geom.*;
 
 
 
@@ -44,7 +45,12 @@ public class DrawingPanel extends JPanel
      */
     public void pickColor()
     {
-        JColorChooser.setDialog("Pick a color");
+        JColorChooser.showDialog(null, "Pick a color", this.currentColor);
     }
-
+    
+    public void addCircle()
+    {
+        Ellipse2D.Double circle = new Ellipse2D.Double();
+        this.shapes.add(circle);
+    }
 }

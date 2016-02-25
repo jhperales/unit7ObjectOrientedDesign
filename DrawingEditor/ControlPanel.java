@@ -21,14 +21,17 @@ public class ControlPanel extends JPanel
         this.add(currentColor);
         this.add(addCircle);
         this.add(addSquare);
+        
+        ColorListener listener = new ColorListener();
+        this.pickColor.addActionListener(listener);
     }
     
     
-    public class ClickListener implements ActionListener
+    public class ColorListener implements ActionListener
     {
         public void actionPerformed(ActionEvent event)
         {
-            System.out.println(event.getActionCommand() + " was clicked");
+            control.pickColor();
         }
     }
 }

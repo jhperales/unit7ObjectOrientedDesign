@@ -1,0 +1,57 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files\Java\jdk1.8.0_60\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;C:\Users\Jerome_2\Desktop\GitHub\GridWorld\gridworld.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-core.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-device.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-gpio-extension.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-service.jar;C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor
+-d
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java...
+Constructing Javadoc information...
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:7: error: cannot find symbol
+    private Color color;
+            ^
+  symbol:   class Color
+  location: class Shape
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:11: error: cannot find symbol
+    public Shape(Point2D.Double point, double r, Color c)
+                                                 ^
+  symbol:   class Color
+  location: class Shape
+Standard Doclet version 1.8.0_60
+Building tree for all the packages and classes...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\Shape.html...
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:24: warning - @pre is an unknown tag.
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:35: warning - @pre is an unknown tag.
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:49: warning - @pre is an unknown tag.
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:49: warning - @post is an unknown tag.
+C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\Shape.java:49: warning - @param argument "x" is not a parameter name.
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\package-frame.html...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\package-summary.html...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\allclasses-frame.html...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\allclasses-noframe.html...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\index.html...
+Generating C:\Users\Jerome_2\Desktop\GitHub\unit7ObjectOrientedDesign\DrawingEditor\doc\stylesheet.css...
+7 warnings
