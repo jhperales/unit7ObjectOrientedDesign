@@ -1,13 +1,7 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
-
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-DEPENDENCIES:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Drawing Editor (Lab)
+PURPOSE OF PROJECT: School related....things
+VERSION or DATE: 1.0 - Alpha
+DEPENDENCIES: Many
+HOW TO START THIS PROJECT: Run main() of class DrawingEditor
+AUTHORS: Me....I'm not giving a name
+USER INSTRUCTIONS: Refer to "How to start this project"
