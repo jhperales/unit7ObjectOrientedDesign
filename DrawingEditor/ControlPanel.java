@@ -22,18 +22,33 @@ public class ControlPanel extends JPanel
         this.add(addCircle);
         this.add(addSquare);
         
-        ColorListener listener = new ColorListener();
+        ClickListener listener = new ClickListener();
         this.pickColor.addActionListener(listener);
+        this.addCircle.addActionListener(listener);
+        this.addSquare.addActionListener(listener);
     }
     
     
-    public class ColorListener implements ActionListener
+    public class ClickListener implements ActionListener
     {
         public void actionPerformed(ActionEvent event)
         {
-            control.pickColor();
+            if (event.getActionCommand() == "Pick Color")
+            {
+                control.pickColor();
+            }
+            if (event.getActionCommand() == "Add Circle")
+            {
+                System.out.println("Add Circle was clicked");
+            }
+            if (event.getActionCommand() == "Add Square")
+            {
+                System.out.println("Add Square was clicked");
+            }
         }
     }
+    
+    
 }
 
         

@@ -18,8 +18,6 @@ public abstract class Shape
     
     /**
      * Returns center of the shape
-     *
-     * @pre     shape has been created 
      * @return  Returns Point2D.Double
      */
     public Point2D.Double getCenter()
@@ -29,8 +27,6 @@ public abstract class Shape
     
     /**
      * Returns radius of shape
-     *
-     * @pre     shap has been created
      * @return  Retursn type double
      */
     public double getRadius()
@@ -41,7 +37,6 @@ public abstract class Shape
     /**
      * Displaces the center of this shape by (x, y)
      *
-     * @pre     Shape is created
      * @post    Shape has moved from previous location
      * @param   x  the x-cooridinate
      * @param   y  the y-cooridinate
@@ -54,7 +49,6 @@ public abstract class Shape
     /**
      * sets the radius to r
      *
-     * @pre     shape is created
      * @post    radius of shape has been modified
      * @param   r the specified radius, what the radius will change to
      */
@@ -63,6 +57,36 @@ public abstract class Shape
         this.radius = r;
     }
 
+    /**
+     * Returns ture if the point lies inside this shape. false otherwise
+     *
+     * @param   point  the specified point to check
+     * @return  returns boolean
+     */
+    public boolean isInside(Point2D.Double point)
+    {
+       return false;
+    }
+
+    /**
+     * Returns true if the point lies approximately on the border of this shape, false otherwise
+     * @param   point  The point that the method will evaluate
+     * @return  Returns type boolean
+     */
+    public boolean isOnBorder(Point2D.Double point)
+    {
+        return false;
+    }
     
+    /**
+     * Draws this shape. Draws a filled shape if filled is true, and a hollow shape otherwise
+     * @param   filled   Evaluates is shape is filled or not
+     *          g2       Default Graphis2D object
+     */
+    public void draw(Graphics2D g2, boolean filled)
+    {
+        
+    }
+
 
 }

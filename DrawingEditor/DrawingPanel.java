@@ -50,7 +50,6 @@ public class DrawingPanel extends JPanel
     
     public void addCircle()
     {
-        Ellipse2D.Double circle = new Ellipse2D.Double();
-        this.shapes.add(circle);
+        
     }
 }
