@@ -18,6 +18,7 @@ public class DrawingPanel extends JPanel
     {
         this.shapes = new ArrayList<Shape>();
         this.currentColor = new Color(0, 0, 0);
+        this.bgColor = new Color(255, 255, 255);
     }
     
     /**
