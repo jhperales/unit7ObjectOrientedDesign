@@ -4,7 +4,8 @@ import java.awt.*;
 
 public class Square extends Shape
 {
-    private Point2D.Double center;
-    private double radius;
-    private Color color;
+    public Square(Point2D.Double p, double r, Color c)
+    {
+        super(p, r, c);
+    }
 }

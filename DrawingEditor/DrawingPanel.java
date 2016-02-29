@@ -53,4 +53,9 @@ public class DrawingPanel extends JPanel
     {
         
     }
+    
+    public void addSquare()
+    {
+        
+    }
 }

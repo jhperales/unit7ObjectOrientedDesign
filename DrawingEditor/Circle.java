@@ -5,10 +5,7 @@ import java.awt.Color;
 
 public class Circle extends Shape
 {
-    public Circle(50, 20, CYAN)
-    {
-        
-    }
+    
     
 }
     

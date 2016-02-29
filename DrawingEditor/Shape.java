@@ -63,9 +63,9 @@ public abstract class Shape
      * @param   point  the specified point to check
      * @return  returns boolean
      */
-    public abstract boolean isInside(Point2D.Double point)
+    public boolean isInside(Point2D.Double point)
     {
-      
+        return false;
     }
 
     /**
@@ -83,7 +83,7 @@ public abstract class Shape
      * @param   filled   Evaluates is shape is filled or not
      *          g2       Default Graphis2D object
      */
-    public abstract void draw(Graphics2D g2, boolean filled)
+    public void draw(Graphics2D g2, boolean filled)
     {
         
     }
