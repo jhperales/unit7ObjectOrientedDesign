@@ -16,6 +16,7 @@ public class ControlPanel extends JPanel
         this.addSquare = new JButton("Add Square");
         this.pickColor = new JButton("Pick Color");
         this.currentColor = new JPanel();
+        this.currentColor.setBackground(control.getColor());
         this.control = controls;
         this.add(pickColor);
         this.add(currentColor);
