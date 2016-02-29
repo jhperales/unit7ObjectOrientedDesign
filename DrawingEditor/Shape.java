@@ -60,13 +60,10 @@ public abstract class Shape
     /**
      * Returns ture if the point lies inside this shape. false otherwise
      *
-     * @param   point  the specified point to check
+     * @param   point  the specified point to checkge
      * @return  returns boolean
      */
-    public boolean isInside(Point2D.Double point)
-    {
-        return false;
-    }
+    public abstract boolean isInside(Point2D.Double point);
 
     /**
      * Returns true if the point lies approximately on the border of this shape, false otherwise
@@ -83,10 +80,7 @@ public abstract class Shape
      * @param   filled   Evaluates is shape is filled or not
      *          g2       Default Graphis2D object
      */
-    public void draw(Graphics2D g2, boolean filled)
-    {
-        
-    }
+    public abstract void draw(Graphics2D g2, boolean filled);
 
 
 }
