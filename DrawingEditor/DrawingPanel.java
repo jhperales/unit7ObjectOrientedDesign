@@ -46,16 +46,20 @@ public class DrawingPanel extends JPanel
      */
     public void pickColor()
     {
-        JColorChooser.showDialog(null, "Pick a color", this.currentColor);
+        this.currentColor = JColorChooser.showDialog(null, "Pick a color", this.currentColor);
     }
     
     public void addCircle()
     {
-        
+       Circle c = new Circle(new Point2D.Double(50,50), Math.random(), this.currentColor);
+       this.shapes.add(c);
     }
     
     public void addSquare()
     {
-        
+        Square s = new Square(new Point2D.Double(50,50), Math.random(), this.currentColor);
+        this.shapes.add(s);
     }
+    
+    
 }

@@ -27,13 +27,6 @@ public class Square extends Shape
     
     public boolean isInside(Point2D.Double point)
     {
-        if (point < radius && point > center)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
