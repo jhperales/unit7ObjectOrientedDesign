@@ -16,8 +16,8 @@ public class ControlPanel extends JPanel
         this.addSquare = new JButton("Add Square");
         this.pickColor = new JButton("Pick Color");
         this.currentColor = new JPanel();
-        this.currentColor.setBackground(control.getColor());
         this.control = controls;
+        this.currentColor.setBackground(control.getColor());
         this.add(pickColor);
         this.add(currentColor);
         this.add(addCircle);
@@ -48,6 +48,7 @@ public class ControlPanel extends JPanel
             }
         }
     }
+    
     
     
 }
