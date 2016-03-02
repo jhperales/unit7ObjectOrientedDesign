@@ -61,5 +61,9 @@ public class DrawingPanel extends JPanel
         this.shapes.add(s);
     }
     
-    
+    public void paintComponent(Graphics g)
+    {
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+    }
 }
