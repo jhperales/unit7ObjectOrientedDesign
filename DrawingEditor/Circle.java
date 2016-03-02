@@ -27,7 +27,18 @@ public class Circle extends Shape
     
     public boolean isInside(Point2D.Double point)
     {
-        return false;
+        double x = point.getX();
+        double y = point.getY();
+        Ellipse2D.Double cir = new Ellipse2D.Double(getCenter().getX(), getCenter().getY(), getRadius(), getRadius());
+        
+        if (cir.contains(x, y))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
     

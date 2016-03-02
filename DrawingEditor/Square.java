@@ -27,6 +27,18 @@ public class Square extends Shape
     
     public boolean isInside(Point2D.Double point)
     {
-        return false;
+        double x = point.getX();
+        double y= point.getY();
+        Rectangle2D.Double rec = new Rectangle2D.Double(getRadius() *2, getRadius() * 2, getCenter().getX(), getCenter().getY());
+        
+        if (rec.contains(x, y))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
 }
