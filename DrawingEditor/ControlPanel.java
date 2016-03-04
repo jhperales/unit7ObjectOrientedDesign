@@ -41,11 +41,11 @@ public class ControlPanel extends JPanel
             }
             if (event.getActionCommand() == "Add Circle")
             {
-                System.out.println("Add Circle was clicked");
+                control.addCircle();
             }
             if (event.getActionCommand() == "Add Square")
             {
-                System.out.println("Add Square was clicked");
+                control.addSquare();
             }
         }
     }

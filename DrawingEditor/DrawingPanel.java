@@ -17,7 +17,7 @@ public class DrawingPanel extends JPanel
     public DrawingPanel()
     {
         this.shapes = new ArrayList<Shape>();
-        this.currentColor = new Color(5, 123, 32);
+        this.currentColor = new Color(0, 0, 0);
         this.bgColor = new Color(255, 255, 255);
     }
     
@@ -51,14 +51,14 @@ public class DrawingPanel extends JPanel
     
     public void addCircle()
     {
-       Circle c = new Circle(new Point2D.Double(50,50), Math.random(), this.currentColor);
+       Circle c = new Circle(new Point2D.Double(50, 50), 200, this.currentColor);
        this.shapes.add(c);
        repaint();
     }
     
     public void addSquare()
     {
-        Square s = new Square(new Point2D.Double(50,50), Math.random(), this.currentColor);
+        Square s = new Square(new Point2D.Double(50, 50), 200, this.currentColor);
         this.shapes.add(s);
         repaint();
     }
@@ -67,17 +67,10 @@ public class DrawingPanel extends JPanel
     {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        for (int i; i < shapes.size(); i++)
+        for (int i = 0; i < shapes.size(); i++)
         {
             Shape currentShape = shapes.get(i);
-            if (currentShape == shapes.get(i))
-            {
-                g2.draw(currentShape.draw());
-            }
-            else
-            {
-                g2.draw(currentShape);
-            }
+            currentShape.draw(g2, true);
         }
     }
 }
