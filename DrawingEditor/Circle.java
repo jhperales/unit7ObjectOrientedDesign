@@ -12,8 +12,8 @@ public class Circle extends Shape
     
     public void draw(Graphics2D g2, boolean filled)
     {
-        Ellipse2D.Double cir = new Ellipse2D.Double(getRadius(), getRadius(), getCenter().getX(), getCenter().getY());
-        g2.setColor(Color.RED);
+        Ellipse2D.Double cir = new Ellipse2D.Double(getCenter().getX(), getCenter().getY(), getRadius(), getRadius());
+        g2.setColor(getColor());
         if (filled = true)
         {
             g2.draw(cir);

@@ -24,7 +24,16 @@ public abstract class Shape
     {
         return this.center;
     }
-    
+    
+    /**
+     * Returns the color of the constructed shape
+     * @return  Color object
+     */
+    public Color getColor()
+    {
+        return this.color;
+    }
+
     /**
      * Returns radiurs of shape
      * @return  Retursn type double
