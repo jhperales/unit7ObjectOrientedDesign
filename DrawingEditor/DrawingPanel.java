@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.awt.*;
 import java.awt.geom.*;
+import java.awt.event.*;
 
 
 
@@ -12,6 +13,7 @@ public class DrawingPanel extends JPanel
     private boolean isMoving;
     private Color currentColor;
     private Color bgColor;
+    private MouseListener listener;
     
     
     public DrawingPanel()
@@ -19,6 +21,7 @@ public class DrawingPanel extends JPanel
         this.shapes = new ArrayList<Shape>();
         this.currentColor = new Color(0, 0, 0);
         this.bgColor = new Color(255, 255, 255);
+        this.listener = new MouseClickListener();
     }
     
     /**
@@ -60,6 +63,7 @@ public class DrawingPanel extends JPanel
     {
         Square s = new Square(new Point2D.Double(150, 150), 50, this.currentColor);
         this.shapes.add(s);
+        s.addMouseListener(this.listener);
         repaint();
     }
     
@@ -71,6 +75,34 @@ public class DrawingPanel extends JPanel
         {
             Shape currentShape = shapes.get(i);
             currentShape.draw(g2, true);
+        }
+    }
+    
+    public class MouseClickListener implements MouseListener
+    {
+        public void mouseClicked(MouseEvent event) 
+        {
+            double x = event.getX();
+            double y = event.getY();
+        }
+
+        public void mouseReleased(MouseEvent event)
+        {
+            double x = event.getX();
+            double y = event.getY();
+        }
+        // Do-nothing methods
+        public void mousePressed(MouseEvent event)
+        {
+
+        }
+
+        public void mouseEntered(MouseEvent event) 
+        {
+        }
+
+        public void mouseExited(MouseEvent event) 
+        {
         }
     }
 }
