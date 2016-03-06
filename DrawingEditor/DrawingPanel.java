@@ -9,11 +9,9 @@ import java.awt.event.*;
 public class DrawingPanel extends JPanel
 {
     private ArrayList<Shape> shapes;
-    private boolean isActive;
-    private boolean isMoving;
+    private Shape activeShape;
     private Color currentColor;
     private Color bgColor;
-    private MouseListener listener;
     
     
     public DrawingPanel()
@@ -21,7 +19,8 @@ public class DrawingPanel extends JPanel
         this.shapes = new ArrayList<Shape>();
         this.currentColor = new Color(0, 0, 0);
         this.bgColor = new Color(255, 255, 255);
-        this.listener = new MouseClickListener();
+        this.addMouseListener(new MouseClickListener());
+        this.addMouseMotionListener(new MouseMoveListener());
     }
     
     /**
@@ -73,30 +72,39 @@ public class DrawingPanel extends JPanel
         for (int i = 0; i < shapes.size(); i++)
         {
             Shape currentShape = shapes.get(i);
-            currentShape.draw(g2, true);
+            if (currentShape == activeShape)
+            {
+                currentShape.draw(g2, false);
+            }
+            else
+            {
+                currentShape.draw(g2, true);
+            }
         }
     }
     
     public class MouseClickListener implements MouseListener
     {
-        public void mouseClicked(MouseEvent event) 
-        {
-            double x = event.getX();
-            double y = event.getY();
-            System.out.println(event.getButton());
-        }
-
-        public void mouseReleased(MouseEvent event)
-        {
-            double x = event.getX();
-            double y = event.getY();
-        }
-        // Do-nothing methods
+        private boolean shapeFound;
         public void mousePressed(MouseEvent event)
         {
-
+            shapeFound = false;
+            for (int i = 0; i < shapes.size(); i++)
+            {
+                Shape currentShape = shapes.get(i);
+                if (currentShape.isInside(new Point2D.Double(event.getX(), event.getY())))
+                {
+                    shapeFound = true;
+                    activeShape = currentShape;
+                }
+            }
+            if (!shapeFound)
+            {
+                activeShape = null;
+            }
+            repaint();
         }
-
+        // Do-nothing methods
         public void mouseEntered(MouseEvent event) 
         {
         }
@@ -104,13 +112,24 @@ public class DrawingPanel extends JPanel
         public void mouseExited(MouseEvent event) 
         {
         }
+        
+        public void mouseClicked(MouseEvent event) 
+        {
+            
+        }
+
+        public void mouseReleased(MouseEvent event)
+        {
+           
+        }
     }
     
     public class MouseMoveListener implements MouseMotionListener
     {
         public void mouseDragged(MouseEvent event)
         {
-            
+            activeShape.move(event.getX(), event.getY());
+            repaint();
         }
         
         //Do-nothing method(s)

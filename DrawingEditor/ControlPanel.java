@@ -8,8 +8,7 @@ public class ControlPanel extends JPanel
     private JButton pickColor;
     private JPanel currentColor;
     private DrawingPanel control;
-    
-    
+
     public ControlPanel(DrawingPanel controls)
     {
         this.addCircle = new JButton("Add Circle");
@@ -22,14 +21,13 @@ public class ControlPanel extends JPanel
         this.add(currentColor);
         this.add(addCircle);
         this.add(addSquare);
-        
+
         ClickListener listener = new ClickListener();
         this.pickColor.addActionListener(listener);
         this.addCircle.addActionListener(listener);
         this.addSquare.addActionListener(listener);
     }
-    
-    
+
     public class ClickListener implements ActionListener
     {
         public void actionPerformed(ActionEvent event)
@@ -49,9 +47,8 @@ public class ControlPanel extends JPanel
             }
         }
     }
-    
-    
-    
-}
 
+    
+
+}
         
