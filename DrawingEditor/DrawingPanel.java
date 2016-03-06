@@ -63,7 +63,6 @@ public class DrawingPanel extends JPanel
     {
         Square s = new Square(new Point2D.Double(150, 150), 50, this.currentColor);
         this.shapes.add(s);
-        s.addMouseListener(this.listener);
         repaint();
     }
     
@@ -84,6 +83,7 @@ public class DrawingPanel extends JPanel
         {
             double x = event.getX();
             double y = event.getY();
+            System.out.println(event.getButton());
         }
 
         public void mouseReleased(MouseEvent event)
@@ -104,5 +104,22 @@ public class DrawingPanel extends JPanel
         public void mouseExited(MouseEvent event) 
         {
         }
+    }
+    
+    public class MouseMoveListener implements MouseMotionListener
+    {
+        public void mouseDragged(MouseEvent event)
+        {
+            
+        }
+        
+        //Do-nothing method(s)
+        public void mouseMoved(MouseEvent event)
+        {
+            
+        }
+        
+        
+        
     }
 }
