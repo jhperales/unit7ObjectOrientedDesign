@@ -62,6 +62,8 @@ public class DrawingPanel extends JPanel
         this.shapes.add(s);
         repaint();
     }
+    
+    
 
     public void paintComponent(Graphics g)
     {
@@ -105,6 +107,7 @@ public class DrawingPanel extends JPanel
 
         public void mouseReleased(MouseEvent event)
         {
+            shapeFound = false;
             activeShape = null;
             repaint();
         }
